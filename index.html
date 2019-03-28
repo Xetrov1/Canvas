@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<canvas id="myCanvas" width="2500" height="1500"
+        style="border:10px outset #000000;background-color:"></canvas>
+
+    <script>
+        var canvas = document.getElementById("myCanvas");
+        var ctx = canvas.getContext("2d");
+        // Create Gradient
+    var grd = ctx.createLinearGradient(0,0,2500,1500);
+        grd.addColorStop(0,"red");
+        grd.addColorStop(1,"blue");
+        grd.addColorStop(1,"yellow");
+        ctx.fillStyle = grd;
+        ctx.fillRect(0,0,2500,1500);
+   // Create Square
+        ctx.fillStyle = "yellow";
+        ctx.fillRect(50,150,200,200);
+    
+// Create Line
+        ctx.moveTo(0,0);
+        ctx.lineTo(1600,1200);
+        ctx.stroke();
+
+// Create Circle
+         var grd1 = ctx.createLinearGradient(0,0,95,50);
+        grd.addColorStop(0,"darkorchid");
+        grd.addColorStop(1,"darkviolet");
+        ctx.beginPath();
+        ctx.arc(120,500,200,0,2*Math.PI);
+        ctx.stroke();
+        ctx.fillStyle = grd1;
+    </script>
+
+    </body>
+</html>
+
